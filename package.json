@@ -1,0 +1,13 @@
+{
+  "name": "iterable-transformers",
+  "private": true,
+  "scripts": {
+    "lint": "tslint --project tsconfig.json --type-check",
+    "compile": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.14",
+    "tslint": "^5.1.0",
+    "typescript": "insiders"
+  }
+}

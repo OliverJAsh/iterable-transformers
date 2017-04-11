@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        // AsyncIterable support
+        "lib": [
+            "esnext"
+        ],
+        "outDir": "./target"
+    },
+    "include": [
+        "./src/**/*.ts"
+    ]
+}
