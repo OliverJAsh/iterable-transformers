@@ -33,5 +33,7 @@ node ./target/AsyncIterable-examples.js
 ## To do
 
 - [ ] Write tests
+- [ ] [Fantasy Land] compatibility
 
 [IxJS]: https://github.com/ReactiveX/IxJS
+[Fantasy Land]: https://github.com/fantasyland/fantasy-land
