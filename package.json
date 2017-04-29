@@ -1,10 +1,16 @@
 {
   "name": "iterable-transformers",
-  "private": true,
+  "main": "./target/src/index.js",
+  "typings": "./target/src/index.d.ts",
+  "version": "0.0.0",
   "scripts": {
     "lint": "tslint --project tsconfig.json --type-check",
-    "compile": "tsc"
+    "compile": "tsc",
+    "prepublish": "yarn run compile && yarn run lint"
   },
+  "files": [
+    "target/src"
+  ],
   "devDependencies": {
     "@types/node": "^7.0.14",
     "tslint": "^5.1.0",

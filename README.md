@@ -6,6 +6,12 @@ This is just a start. I'm looking for contributors :-)
 
 [IxJS] is supposed to solve this problem, but I wanted something I could start using today.
 
+## Installation
+
+```
+yarn add iterable-transformers
+```
+
 ## Transformers
 
 |transformers|`Iterable`|`AsyncIterable`|

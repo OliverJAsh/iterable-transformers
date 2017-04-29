@@ -10,7 +10,8 @@
         "lib": [
             "esnext"
         ],
-        "outDir": "./target"
+        "outDir": "./target",
+        "declaration": true
     },
     "include": [
         "./src/**/*.ts",
