@@ -40,7 +40,7 @@ const eg3 = async () => {
 
     const a = gen();
     console.log('toArray');
-    toArray(a).then(console.log);
+    return toArray(a).then(console.log);
 };
 
 const egs = [
