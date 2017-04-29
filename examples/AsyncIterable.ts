@@ -1,4 +1,4 @@
-import { map, flatten, toArray } from '../src/AsyncIterable';
+import { map, flatten, toArray, takeWhile } from '../src/AsyncIterable';
 
 const eg1 = async () => {
     const gen = async function* () {
@@ -43,10 +43,25 @@ const eg3 = async () => {
     return toArray(a).then(console.log);
 };
 
+const eg4 = async () => {
+    const gen = async function* () {
+        yield 10;
+        yield 20;
+    };
+
+    const a = gen();
+    console.log('takeWhile');
+    const b = takeWhile((t: number) => t <= 10)(a);
+    for await (const y of b) {
+        console.log(y);
+    }
+};
+
 const egs = [
     eg1,
     eg2,
     eg3,
+    eg4,
 ];
 
 const sequencePromiseFns = (fns: Array<() => Promise<any>>) => (

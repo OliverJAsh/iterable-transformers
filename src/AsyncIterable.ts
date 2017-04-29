@@ -52,3 +52,14 @@ export const toArray = async <TSource>(
     };
     return reduce(reducer)([])(source);
 };
+
+export const takeWhile = <TSource>(
+    predicate: (t: TSource) => boolean,
+) => async function* (
+    source: AsyncIterable<TSource>,
+): AsyncIterable<TSource> {
+    for await (const value of source) {
+        if (!predicate(value)) { break; }
+        yield value;
+    }
+};

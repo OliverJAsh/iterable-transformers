@@ -1,4 +1,4 @@
-import { map, flatten, toArray } from '../src/Iterable';
+import { map, flatten, toArray, takeWhile } from '../src/Iterable';
 
 const eg1 = () => {
     const gen = function* () {
@@ -44,10 +44,25 @@ const eg3 = async () => {
     console.log(toArray(a));
 };
 
+const eg4 = async () => {
+    const gen = function* () {
+        yield 10;
+        yield 20;
+    };
+
+    const a = gen();
+    console.log('takeWhile');
+    const b = takeWhile((t: number) => t <= 10)(a);
+    for (const y of b) {
+        console.log(y);
+    }
+};
+
 const egs = [
     eg1,
     eg2,
     eg3,
+    eg4,
 ];
 
 egs.forEach(eg => eg());

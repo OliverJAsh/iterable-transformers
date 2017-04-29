@@ -22,7 +22,7 @@ yarn add iterable-transformers
 |`toArray`|✅|✅|
 |`filter`|TODO|TODO|
 |`take`|TODO|TODO|
-|`takeWhile`|TODO|TODO|
+|`takeWhile`|✅|✅|
 |`takeUntil`|TODO|TODO|
 |`drop`|TODO|TODO|
 |`dropWhile`|TODO|TODO|
