@@ -2,7 +2,7 @@ export const map = <TSource, TResult>(
     fn: (value: TSource) => TResult,
 ) => function* (
     source: Iterable<TSource>,
-) {
+): Iterable<TResult> {
     for (const value of source) {
         yield fn(value);
     }
@@ -10,7 +10,7 @@ export const map = <TSource, TResult>(
 
 export const flatten = function* <TSource>(
     source: Iterable<Iterable<TSource>>,
-) {
+): Iterable<TSource> {
     for (const value of source) {
         yield* value;
     }
@@ -23,7 +23,7 @@ export const reduce = <Acc, TSource>(
     initialValue: Acc,
 ) => (
     source: Iterable<TSource>,
-) => {
+): Acc => {
     const iterator = source[Symbol.iterator]();
 
     const recurse = (iterator: Iterator<TSource>, acc: Acc): Acc => {
@@ -43,7 +43,7 @@ export const reduce = <Acc, TSource>(
 // TODO: Delegate to Array.from instead?
 export const toArray = <TSource>(
     source: Iterable<TSource>,
-) => {
+): Iterable<TSource> => {
     type Acc = TSource[];
     const reducer: Reducer<Acc, TSource> = (acc, t) => {
         acc.push(t);
