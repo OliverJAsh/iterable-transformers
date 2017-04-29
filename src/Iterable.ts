@@ -21,9 +21,9 @@ export const reduce = <Acc, TSource>(
     reducer: Reducer<Acc, TSource>,
 ) => (
     initialValue: Acc,
-) => function (
+) => (
     source: Iterable<TSource>,
-) {
+) => {
     const iterator = source[Symbol.iterator]();
 
     const recurse = (iterator: Iterator<TSource>, acc: Acc): Acc => {
@@ -41,9 +41,9 @@ export const reduce = <Acc, TSource>(
 };
 
 // TODO: Delegate to Array.from instead?
-export const toArray = function <TSource>(
+export const toArray = <TSource>(
     source: Iterable<TSource>,
-) {
+) => {
     type Acc = TSource[];
     const reducer: Reducer<Acc, TSource> = (acc, t) => {
         acc.push(t);

@@ -23,9 +23,9 @@ export const reduce = <Acc, TSource>(
     reducer: Reducer<Acc, TSource>,
 ) => (
     initialValue: Acc,
-) => async function (
+) => async (
     source: AsyncIterable<TSource>,
-) {
+) => {
     const iterator = source[Symbol.asyncIterator]();
 
     const recurse = async (iterator: AsyncIterator<TSource>, acc: Acc): Promise<Acc> => {
@@ -42,9 +42,9 @@ export const reduce = <Acc, TSource>(
     return recurse(iterator, initialValue);
 };
 
-export const toArray = async function <TSource>(
+export const toArray = async <TSource>(
     source: AsyncIterable<TSource>,
-) {
+) => {
     type Acc = TSource[];
     const reducer: Reducer<Acc, TSource> = (acc, t) => {
         acc.push(t);
