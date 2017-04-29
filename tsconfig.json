@@ -6,6 +6,7 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "sourceMap": true,
+
         // AsyncIterable support
         "lib": [
             "esnext"
