@@ -28,8 +28,8 @@ This is just a start. I'm looking for contributors :-)
 yarn
 yarn run lint
 yarn run compile
-node ./target/Iterable-examples.js
-node ./target/AsyncIterable-examples.js
+node ./target/examples/Iterable.js
+node ./target/examples/AsyncIterable.js
 ```
 
 ## To do

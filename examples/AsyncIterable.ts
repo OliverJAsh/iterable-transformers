@@ -1,4 +1,4 @@
-import { map, flatten, toArray } from './AsyncIterable';
+import { map, flatten, toArray } from '../src/AsyncIterable';
 
 const eg1 = async () => {
     const gen = async function* () {

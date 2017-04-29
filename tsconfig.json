@@ -13,6 +13,7 @@
         "outDir": "./target"
     },
     "include": [
-        "./src/**/*.ts"
+        "./src/**/*.ts",
+        "./examples/**/*.ts"
     ]
 }

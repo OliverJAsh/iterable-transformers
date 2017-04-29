@@ -1,4 +1,4 @@
-import { map, flatten, toArray } from './Iterable';
+import { map, flatten, toArray } from '../src/Iterable';
 
 const eg1 = () => {
     const gen = function* () {
