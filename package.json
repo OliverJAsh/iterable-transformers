@@ -2,7 +2,7 @@
   "name": "iterable-transformers",
   "main": "./target/src/index.js",
   "typings": "./target/src/index.d.ts",
-  "version": "0.0.2",
+  "version": "0.0.3-ts-insiders.20170513",
   "scripts": {
     "lint": "tslint --project tsconfig.json --type-check",
     "compile": "tsc",
