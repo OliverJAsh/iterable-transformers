@@ -184,9 +184,9 @@ tsutils@^1.4.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-1.7.0.tgz#2e63ccc2d6912bb095f7e363ff4100721dc86f50"
 
-typescript@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.2.tgz#f0f045e196f69a72f06b25fd3bd39d01c3ce9984"
+typescript@insiders:
+  version "2.3.3-insiders.20170512"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.3-insiders.20170512.tgz#6125088311f1b7f9ff6ba73e0b5380a6c85dd2ce"
 
 wordwrap@~0.0.2:
   version "0.0.3"
